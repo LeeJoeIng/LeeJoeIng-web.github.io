@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Joetoine Birthday Party 2022</title>
+      <script type = "text/javascript">
+
+         function validateForm() {
+             var name = document.forms["myForm"]["flag"].value;
+             if(name == "") {
+                 alert("Please enter the flag");
+                 return false;
+             }else if(name == "jetaimemonhero") {
+               return true;
+             }else{
+               alert("Oops, please try again :(");
+               return false;
+             }
+             
+         }
+
+         function submitByJavascript()  {
+
+             var valid = validateForm();
+             if(!valid)  {
+               return;
+             }
+
+             var myForm = document.forms["myForm"];
+
+             myForm.submit();
+         }
+      </script>
+   </head>
+   
+   <body>
+   <br/><br/>
+     <h2 class="content">Joetoine Birthday Party 2022</h2>
+     <br/><br/>
+      <div class="content" style="border:1px solid #ddd; padding: 5px;">
+
+         <form name="myForm" action="process-action.html" onsubmit = "return validateForm()">
+            <br/>
+            Flag: <input type="text" name = "flag" value =""/>
+            <br/><br/>
+         </form>
+         Pneumonoultramicroscopicsilicovolcanoconiosis:
+         <button onclick="submitByJavascript()" >Click Me to get your birthday present</button>
+      </div>
+       <br/>
+      
+      <style>
+         body {
+           background-image: url('img.jpg');
+         }
+         
+         .content{
+            max-width: 500px;
+            margin: auto;
+}
+         </style> 
+   </body>
+
+
+</html>
